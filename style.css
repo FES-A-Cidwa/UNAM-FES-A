@@ -266,7 +266,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Merriweather',sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -282,6 +282,7 @@ h6 {
 }
 
 p {
+	font-family: 'Fiera Sans', sans-serif;
 	margin-bottom: 1.5em;
 }
 
@@ -340,7 +341,7 @@ big {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-html {
+html { /*Se puede eliminar para evitar problema con los paddings y los magins y hacerla más responsiva*/
 	box-sizing: border-box;
 }
 
@@ -646,6 +647,7 @@ a:active {
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
+/* Útil para todos los Temas */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;

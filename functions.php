@@ -33,6 +33,16 @@ function unam_fes_a_setup() {
 	 * hard-coded <title> tag in the document head, and expect WordPress to
 	 * provide it for us.
 	 */
+	
+	//Agregue función para el tipo de post, no venia en esta versión pero la agrego para seguir con el tutorial de manera correcta
+	add_theme_support( 'post-formats' , array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+	) );
+
 	add_theme_support( 'title-tag' );
 
 	/*
@@ -43,6 +53,9 @@ function unam_fes_a_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
+	/* Sí existen varios menús aquí se agregan
+	se copia la linea de abajo y que quede adentro de del array,
+	se pone un nombre nuevo y un nombre que podamos entender. */
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'unam-fes-a' ),
 	) );
@@ -106,6 +119,9 @@ add_action( 'widgets_init', 'unam_fes_a_widgets_init' );
  */
 function unam_fes_a_scripts() {
 	wp_enqueue_style( 'unam-fes-a-style', get_stylesheet_uri() );
+
+	//Agregamos Font desde Google Fonts
+	wp_enqueue_style( 'unam-fes-a-google-fonts','https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Merriweather:400,400i,700,700i');
 
 	wp_enqueue_script( 'unam-fes-a-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

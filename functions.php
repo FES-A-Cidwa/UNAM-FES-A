@@ -59,7 +59,7 @@ function unam_fes_a_setup() {
 		'caption',
 	) );
 
-	// Set up the WordPress core custom background feature.
+	// Set up the WordPress core custom background feature. //En caso de no querer que puedan cambiar el fondo hay que quitar esta función
 	add_theme_support( 'custom-background', apply_filters( 'unam_fes_a_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',

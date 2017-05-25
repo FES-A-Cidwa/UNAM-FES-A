@@ -122,7 +122,8 @@ function unam_fes_a_scripts() {
 
 	//Agregamos Font desde Google Fonts
 	wp_enqueue_style( 'unam-fes-a-google-fonts','https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Merriweather:400,400i,700,700i');
-
+	/* Ver video 04_XR15_localfont.mp4 para el host en la página para las fuentes*/
+	
 	wp_enqueue_script( 'unam-fes-a-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'unam-fes-a-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

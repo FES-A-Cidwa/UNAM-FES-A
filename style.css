@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Header
 # Widgets
 # Content
 	## Posts and pages
@@ -265,12 +266,18 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #000;
 	font-family: 'Merriweather',sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
 }
+
+.site-content {
+	font-size: 1.125em; /* Son relativos y se cmabian dinamicamente*/
+	line-height: 1.6em;
+
+}	
 
 h1,
 h2,
@@ -278,11 +285,21 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: 'Fiera Sans', sans-serif;
 	clear: both;
+	line-height: 1.3em;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
 }
 
+h1 { font-size: 2.4em; }	/*Separación relativa de tamaños de todos los headings*/
+h2 { font-size: 2.2em; }	/* Relativo al .sise_content*/
+h3 { font-size: 2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1.4em; }
+
 p {
-	font-family: 'Fiera Sans', sans-serif;
 	margin-bottom: 1.5em;
 }
 
@@ -734,6 +751,46 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* Primeras modificaciones del header */
+
+.site-header {
+	background-color: #000;
+}
+
+.site-branding {
+	text-align: center;
+}
+
+.site-title {
+	margin: 1.7em 1em 0;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 2.4em;
+	font-weight: bold;
+	line-height: 1.3em;
+	color: #fff;
+	text-transform: uppercase;
+	word-break: break-word; /* Truco de css */
+}
+/* Esto de los medias estan bien chidos pero hay que investigar bien lo de los em o explicame jajaja*/
+@media screen and (max-width: 30em){ 
+	.site-title {
+		font-size: 2em;
+	}
+}
+
+.site-title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.site-title a:hover,
+.site-title a:focus {
+	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
@@ -748,6 +805,38 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Global
+--------------------------------------------------------------*/
+.site-main { /* Necesito invetigar que es eso de em y rem :)*/
+	
+	margin: 1.4em;
+	font-size: .8em;
+	line-height: 1.6em;
+}
+
+/* A partir de pantallas después de 1024x797 el margen desaparece*/
+
+@media screen and (min-width: 30em) {
+	.site-main {
+		margin: 1.8em;
+	}
+}
+
+@media screen and (min-width: 40em) {
+	.site-main {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 57em) {
+	.site-main {
+		max-height: 45em;
+		margin: 1.8em auto;
+	}
+}
+
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

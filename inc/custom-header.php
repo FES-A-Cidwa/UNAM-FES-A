@@ -4,8 +4,18 @@
  *
  * You can add an optional custom header image to header.php like so ...
  *
-	<?php the_header_image_tag(); ?>
- *
+	<?php the_header_image_tag(); ?>  
+
+ *	<?php if ( get_header_image() ) : ?>
+    <div id="site-header">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+        </a>
+    </div>
+<?php endif; ?> //Esta parte del código no venía yo la agregué par poder imagenes en el header. 
+
+
+
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
  * @package UNAM
@@ -19,9 +29,9 @@
 function unam_fes_a_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'unam_fes_a_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-text-color'     => 'fffffff',
+		'width'                  => 1600, /* Regresalos a los valores originales para que veas el cambio */
+		'height'                 => 420,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'unam_fes_a_header_style',
 	) ) );

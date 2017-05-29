@@ -58,6 +58,7 @@ function unam_fes_a_setup() {
 	se pone un nombre nuevo y un nombre que podamos entender. */
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'unam-fes-a' ),
+		
 	) );
 
 	/*

@@ -552,11 +552,24 @@ a:active {
 /* Arturo cuando llegues a la parte de editar el fonto y el fondo del menú por favor ayudame jajaja porque no puede hacerlo y el archivo de ejercicios cambia un chingo, de todas formas checalo*/
 
 /* Copiado de twentyfifteen */
+
 .main-navigation a {
 	display: block;
 	padding: 0.8em 0;
 	position: relative;
 	text-decoration: none;
+	font-family: "Fiera Sans", sans-serif;
+	color: white;
+}
+
+.main-navigation a:hover, a:focus {
+	display: block;
+	padding: 0.8em 0;
+	position: relative;
+	text-decoration: none;
+	font-family: "Fiera Sans", sans-serif;
+	color: black;
+	background-color: white;
 }
 
 .main-navigation ul {

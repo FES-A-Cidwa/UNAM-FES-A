@@ -560,6 +560,7 @@ a:active {
 	text-decoration: none;
 	font-family: "Fiera Sans", sans-serif;
 	color: white;
+	font-size: 30px;
 }
 
 .main-navigation a:hover, a:focus {
